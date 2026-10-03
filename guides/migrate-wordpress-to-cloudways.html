@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to Migrate WordPress to Cloudways (Free Plugin Method) — Cloudways Guides</title>
+<meta name="description" content="The complete migration flow: All-in-One WP Migration export, import on Cloudways, staging tests, then a zero-downtime DNS switch.">
+<meta name="google-site-verification" content="36pb8IPRRwSPMd5rkoVs9BLezMyI7jY3Jf77o13JfJ8">
+<meta property="og:title" content="How to Migrate WordPress to Cloudways (Free Plugin Method) — Cloudways Guides">
+<meta property="og:description" content="The complete migration flow: All-in-One WP Migration export, import on Cloudways, staging tests, then a zero-downtime DNS switch.">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://i.ytimg.com/vi/-A5nmZ5kUGo/hqdefault.jpg">
+<meta property="og:site_name" content="Cloudways Guides">
+<link rel="stylesheet" href="../css/style.css">
+
+</head>
+<body>
+<header class="site-head">
+  <div class="wrap"><a class="brand" href="../index.html"><span class="dot"></span>Cloudways Guides</a>
+<nav>
+  <a class="active" href="../index.html">All lessons</a>
+  <a href="../about.html">About</a>
+  <a href="https://www.youtube.com/@mrait" target="_blank" rel="noopener">YouTube ↗</a>
+</nav></div>
+</header>
+<main class="wrap">
+  <nav class="crumbs"><a href="../index.html">All lessons</a> <span>/</span> How to Migrate WordPress to Cloudways (Free Plugin Method)</nav>
+  <article>
+    <span class="pill">Reference · Migration</span>
+    <h1>How to Migrate WordPress to Cloudways (Free Plugin Method)</h1>
+    <p class="byline">A reference guide based on MR AIT’s Cloudways video course</p>
+    
+    
+<p>Moving a live site feels risky until you’ve done it once with a staging URL in the middle. This is the full flow from <a href="how-to-use-cloudways.html">Lesson 4</a>, step by step.</p>
+
+<h2>Before you start</h2>
+<p>You need a Cloudways account with a WordPress application deployed (<a href="getting-started-with-cloudways.html">Lesson 2 covers the launch</a>). Every application gets a temporary staging URL immediately — that URL is what makes this migration zero-downtime.</p>
+
+<h2>Step 1: Export from the old site</h2>
+<ol>
+  <li>Install the free <strong>All-in-One WP Migration</strong> plugin on your existing WordPress site.</li>
+  <li>Go to its Export screen and download the full site file — content, media, themes, plugins, and settings in one package.</li>
+</ol>
+
+<h2>Step 2: Import on Cloudways</h2>
+<ol>
+  <li>Open your new Cloudways application’s staging URL and install the same plugin.</li>
+  <li>Import the file. The import overwrites the fresh WordPress install with your site.</li>
+  <li>Log into wp-admin with your old credentials and re-save your permalinks.</li>
+</ol>
+
+<h2>Step 3: Test on staging</h2>
+<ul>
+  <li>Click through pages, posts, images, menus, and forms.</li>
+  <li>Check that plugins behave and no hardcoded old-domain URLs break assets.</li>
+  <li>Test on mobile — or with a proper <a href="how-to-use-antidetect-browser.html" rel="nofollow">device profile</a> if you’re thorough.</li>
+</ul>
+
+<h2>Step 4: Flip the domain</h2>
+<ol>
+  <li>Update your domain’s DNS A record to your new server’s public IP (shown in the Cloudways application panel).</li>
+  <li>Issue the free SSL certificate from the application’s SSL tab once DNS resolves.</li>
+  <li>Watch traffic for a day before closing the old hosting account — then cancel it and enjoy the speed.</li>
+</ol>
+
+<div class="callout callout-tip">
+  <strong>No old site to migrate?</strong> Skip to <a href="launch-vps-in-5-minutes.html">the 5-minute launch guide</a> and build fresh.
+</div>
+
+    <h2 id="faq">Frequently asked questions</h2><div class="faq"><details class="faq-item"><summary>How much does migrating to Cloudways cost?</summary><p>The plugin method shown here is free — All-in-One WP Migration has no cost for standard exports and imports. Your only cost is the server time, which the trial credits can cover.</p></details><details class="faq-item"><summary>How long will my site be down?</summary><p>Zero, if you follow the staging flow: the old host keeps serving visitors until you switch DNS, and DNS propagation is the only transition window.</p></details><details class="faq-item"><summary>What if my site is bigger than the upload limit?</summary><p>All-in-One WP Migration lets you export in chunks, and the video’s flow works the same — split the export, import the parts in order.</p></details><details class="faq-item"><summary>Do I need to reinstall my theme and plugins?</summary><p>No — the import carries the entire site: themes, plugins, media, users, and settings.</p></details></div>
+  </article>
+  <aside class="lesson-list">
+    <h2>All lessons in this course</h2>
+    <a href="index.html#migrate-wordpress-to-cloudways">Try Cloudways VPS for FREE: 2 Methods That Need No Commitment</a><a href="index.html#migrate-wordpress-to-cloudways">How to Get Started with Cloudways: Sign-Up to First WordPress Site</a><a href="index.html#migrate-wordpress-to-cloudways">Launch a Cloudways VPS Server in 5 Minutes: The Deep Dive</a><a href="index.html#migrate-wordpress-to-cloudways">How to Use Cloudways: Deploy, Access, and Migrate WordPress</a><a href="index.html#migrate-wordpress-to-cloudways">Cloudways vs Shared Hosting (and Raw VPS): Why the Switch Pays Off</a><a href="index.html#migrate-wordpress-to-cloudways">Cloudways vs Hostinger: Which Hosting Is Right for You?</a><a href="index.html#migrate-wordpress-to-cloudways">Cloudways Pricing Explained: What You Actually Pay in 2026</a><a href="index.html#migrate-wordpress-to-cloudways">Cloudways Free Trial: 3 Days, No Credit Card (+ Bonus Credits)</a><a href="index.html#migrate-wordpress-to-cloudways">How to Migrate WordPress to Cloudways (Free Plugin Method)</a><a href="index.html#migrate-wordpress-to-cloudways">Cloudways vs Raw Vultr &amp; DigitalOcean: Managed vs Unmanaged VPS</a>
+  </aside>
+  <div class="pager-row"><a class="pager prev" href="cloudways-free-trial.html"><span>← Previous</span><strong>Cloudways Free Trial: 3 Days, No Credit Card (+ Bonus Credits)</strong></a><a class="pager next" href="cloudways-vs-vultr-digitalocean.html"><span>Next →</span><strong>Cloudways vs Raw Vultr &amp; DigitalOcean: Managed vs Unmanaged VPS</strong></a></div>
+</main>
+<footer class="site-foot"><div class="wrap"><p><strong>Cloudways Guides</strong> — written companions to MR AIT's video course on Cloudways managed cloud hosting.</p>
+<p>Videos © MR AIT. · <a href="https://www.youtube.com/@mrait" target="_blank" rel="noopener">YouTube channel</a> · <a href="https://mrait.ca/go/vpsdealz" rel="nofollow noopener" target="_blank">Cloudways free trial &amp; credits</a></p>
+<p>Educational content only: follow site terms and local regulations when using any tool featured here.</p></div></footer>
+</body>
+</html>
